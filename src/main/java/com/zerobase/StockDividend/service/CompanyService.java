@@ -6,7 +6,7 @@ import com.zerobase.StockDividend.persist.CompanyRepository;
 import com.zerobase.StockDividend.persist.DividendRepository;
 import com.zerobase.StockDividend.persist.entity.CompanyEntity;
 import com.zerobase.StockDividend.persist.entity.DividendEntity;
-import com.zerobase.StockDividend.scraper.Scrapper;
+import com.zerobase.StockDividend.scraper.Scraper;
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections4.Trie;
 import org.springframework.data.domain.Page;
@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 public class CompanyService {
 
     private final Trie trie; // AppConfig 에서 스프링빈으로 관리
-    private final Scrapper yahooFinanceScrapper;
+    private final Scraper yahooFinanceScrapper;
 
     private final CompanyRepository companyRepository;
     private final DividendRepository dividendRepository;
