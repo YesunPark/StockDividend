@@ -18,13 +18,16 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     // 실제 api 테스트 시 주석처리 안하면 400대 에러 뜰 수 있음
+    // 회원가입 기능 구현 시 필요함
 
     implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     implementation 'org.jsoup:jsoup:1.15.2'
     implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.3'
     // trie 구조를 사용하기 위한 라이브러리
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    // json web 토큰 관련
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
